@@ -1,0 +1,130 @@
+/* General Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #ffe4ec;
+    color: #333;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Navbar */
+  .navbar {
+    background-color: #e91e63;
+    padding: 10px 20px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  }
+  
+  .navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .navbar li {
+    margin: 0 15px;
+  }
+  
+  .navbar a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    padding: 8px 16px;
+    border-radius: 20px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .navbar a:hover {
+    background-color: #ff8ba7;
+  }
+  
+  /* Main Content */
+  .open-when-container {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .envelopes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 30px;
+  }
+  
+  .envelope {
+    position: relative;
+    width: 150px;
+    cursor: pointer;
+  }
+  
+  .envelope img {
+    width: 100%;
+    transition: transform 0.3s ease;
+  }
+  
+  .envelope img.hidden {
+    display: none;
+  }
+  
+  .envelope:hover img.closed {
+    transform: scale(1.1);
+  }
+  
+  /* Tooltip */
+  .envelope::before {
+    content: attr(data-condition);
+    position: absolute;
+    bottom: 110%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #ff69b4;
+    color: #fff;
+    padding: 5px 10px;
+    font-size: 12px;
+    border-radius: 5px;
+    white-space: nowrap;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+  }
+  
+  .envelope:hover::before {
+    opacity: 1;
+  }
+  
+  /* Popup */
+  .popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    width: 300px;
+    border-radius: 10px;
+    text-align: center;
+    z-index: 1000;
+  }
+  
+  .popup.hidden {
+    display: none;
+  }
+  
+  .popup-content {
+    position: relative;
+  }
+  
+  .popup-content .close-popup {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 16px;
+    color: #ff69b4;
+  }

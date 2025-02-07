@@ -1,0 +1,81 @@
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    background: #ffe4ec;
+    color: #333;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Navbar – matching Page 1’s style */
+  .navbar {
+    background-color: #e91e63;
+    padding: 10px 20px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  }
+  
+  .navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .navbar li {
+    margin: 0 15px;
+  }
+  
+  .navbar a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    padding: 8px 16px;
+    border-radius: 20px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .navbar a:hover {
+    background-color: #ff8ba7;
+  }
+  
+  /* Puzzle Container */
+  .puzzle-container {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  /* Puzzle Board – a 4x4 grid */
+  #puzzle-board {
+    display: grid;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: repeat(4, 100px);
+    gap: 5px;
+    margin: 20px auto;
+    width: 420px;
+  }
+  
+  /* Each puzzle piece is a div with a background image */
+  .puzzle-piece {
+    width: 100px;
+    height: 100px;
+    border: 1px solid #ccc;
+    background-size: cover;
+    background-position: center;
+    cursor: grab;
+  }
+  
+  /* A hidden element (for the solved-message) */
+  .hidden {
+    display: none;
+  }
+  
+  /* Solved message styling */
+  #message {
+    margin-top: 20px;
+    font-size: 1.5em;
+    color: #e91e63;
+  }
+  
